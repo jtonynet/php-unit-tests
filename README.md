@@ -54,6 +54,13 @@ A aplicação base foi diretamente baixada do repositório do curso para que os 
 
 Também busco explorar melhorias na versão atual da linguagem, sempre que possível, adaptando códigos, mesmo que estejam fora do escopo inicial do curso.
 
+<br/>
+
+Projeto do Curso:
+- `Testes de Unidade` da `API de Leilão` com [`PHPUnit`](https://phpunit.de/index.html)
+
+
+<br/>
 
 <div align="center">
   <img src="./docs/assets/images/layout/roadmap_in_here.jpeg" alt=""/>
@@ -80,8 +87,6 @@ Também busco explorar melhorias na versão atual da linguagem, sempre que poss�
 ### 🔢 Versões
 
 As tags de versões estão sendo criadas manualmente a medida que o curso avança. Cada módulo é desenvolvido em uma branch a parte (Branch Based, [feature branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)) quando finalizadas é gerada tag e mergeadas em main.
-
-Para obter mais informações, consulte o [Histórico de Versões](./CHANGELOG.md).
 
 <br/>
 
@@ -282,4 +287,13 @@ php artisan test
  - [Adicionar validacao assim q possivel](https://laravel.com/docs/9.x/validation#rule-confirmed)
  - 
  - [Laravel Breeze Lesson](https://cursos.alura.com.br/course/laravel-transacoes-service-container-autenticacao/task/105915)
+-->
+
+
+<!--  
+
+PHPUnti no PHP 8.1 ou superior:
+```
+composer require --dev phpunit/phpunit ^10
+```
 -->
