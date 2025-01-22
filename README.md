@@ -81,8 +81,6 @@ Também busco explorar melhorias na versão atual da linguagem, sempre que poss�
 
 As tags de versões estão sendo criadas manualmente a medida que o curso avança. Cada módulo é desenvolvido em uma branch a parte (Branch Based, [feature branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)) quando finalizadas é gerada tag e mergeadas em main.
 
-Para obter mais informações, consulte o [Histórico de Versões](./CHANGELOG.md).
-
 <br/>
 
 [⤴️ de volta ao Index](#index)
