@@ -4,3 +4,4 @@ composer.phar
 
 ##### phpunit
 testes-executados.txt
+/.phpunit.cache/
