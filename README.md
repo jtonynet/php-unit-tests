@@ -180,4 +180,7 @@ RODANDO TESTES:
 ```bash
 ./vendor/bin/phpunit --colors tests
  ```
+
+Doc sobre phpunit.xml
+https://docs.phpunit.de/en/10.5/configuration.html
 -->
