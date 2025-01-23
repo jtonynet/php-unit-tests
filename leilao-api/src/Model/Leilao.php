@@ -6,12 +6,16 @@ class Leilao
 {
     /** @var Lance[] */
     private $lances;
+
     /** @var string */
     private $descricao;
+
     /** @var bool */
     private $finalizado;
+
     /** @var \DateTimeInterface  */
     private $dataInicio;
+
     /** @var int */
     private $id;
 

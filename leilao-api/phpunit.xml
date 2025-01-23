@@ -4,11 +4,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd" 
     cacheDirectory=".phpunit.cache"
+    bootstrap="vendor/autoload.php"
     colors="true"
     testdox="true" >
   <testsuites>
     <testsuite name="unit">
-      <directory>tests</directory>
+      <directory>./tests</directory>
     </testsuite>
   </testsuites>
   <!--logging>
