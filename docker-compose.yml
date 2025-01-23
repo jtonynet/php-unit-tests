@@ -1,4 +1,4 @@
-name: php-unit-course
+name: php-course
 
 networks:
   course-network:
@@ -10,7 +10,9 @@ services:
       context: ./leilao-api
       dockerfile: Dockerfile
     volumes:
-      - ./leilao-api:/usr/src/app/
+      - ./leilao-api/src:/usr/src/app/src
+      - ./leilao-api/tests:/usr/src/app/tests
+      - ./leilao-api/composer.json:/usr/src/app/composer.json
+      - ./leilao-api/composer.lock:/usr/src/app/composer.lock
     networks:
       - course-network
-    command: ./vendor/bin/phpunit
