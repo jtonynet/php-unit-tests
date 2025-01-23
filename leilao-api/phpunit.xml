@@ -4,14 +4,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd" 
     cacheDirectory=".phpunit.cache"
-    colors="true" >
+    colors="true"
+    testdox="true" >
   <testsuites>
     <testsuite name="unit">
       <directory>tests</directory>
     </testsuite>
   </testsuites>
-  <logging>
+  <!--logging>
     <testdoxText outputFile="testes-executados.txt"/>
-  </logging>
+  </logging-->
   <source/>
 </phpunit>
