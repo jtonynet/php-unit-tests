@@ -11,7 +11,9 @@
     https://devicon.dev/
     https://simpleicons.org/
 -->
-[<img src="./docs/assets/images/icons/php.svg" width="40px" height="40px" alt="PHP logo" title="PHP">](https://www.php.net) [<img src="./docs/assets/images/icons/composer.svg" width="35px" height="35px" alt="Composer logo" title="Composer"/>](https://getcomposer.org/) [<img src="./docs/assets/images/icons/ubuntu.svg" width="25px" height="25px Logo" title="Ubunto" alt="Ubunto" />](https://ubuntu.com/) [<img src="./docs/assets/images/icons/github.svg" width="25px" height="25px" alt="GitHub Logo" title="GitHub">](https://github.com/jtonynet) [<img src="./docs/assets/images/icons/visualstudiocode.svg" width="25px" height="25px" alt="VsCode Logo" title="VsCode">](https://code.visualstudio.com/) 
+[<img src="./docs/assets/images/icons/php.svg" width="40px" height="40px" alt="PHP logo" title="PHP">](https://www.php.net) [<img src="./docs/assets/images/icons/composer.svg" width="35px" height="35px" alt="Composer logo" title="Composer"/>](https://getcomposer.org/) [<img src="./docs/assets/images/icons/ubuntu.svg" width="25px" height="25px Logo" title="Ubunto" alt="Ubunto" />](https://ubuntu.com/) [<img src="./docs/assets/images/icons/docker.svg" width="25px" height="25px" alt="Docker Logo" title="Docker">](https://www.docker.com/) [<img src="./docs/assets/images/icons/github.svg" width="25px" height="25px" alt="GitHub Logo" title="GitHub">](https://github.com/jtonynet) [<img src="./docs/assets/images/icons/visualstudiocode.svg" width="25px" height="25px" alt="VsCode Logo" title="VsCode">](https://code.visualstudio.com/) 
+
+
 
 
 <!--
@@ -75,7 +77,20 @@ Projeto do Curso:
 <a id="run"></a>
 ### 💻 Rodando o Projeto
 
-**TODO**
+
+Basta no diretório raiz rodar o comando 
+
+```
+docker compose up
+```
+
+ou
+
+```
+docker-compose up
+```
+
+de acordo com a versão do seu `docker-compose` e veja os testes serem executados no seu terminal
 
 <br/>
 

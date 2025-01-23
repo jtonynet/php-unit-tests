@@ -1,0 +1,16 @@
+name: php-unit-course
+
+networks:
+  course-network:
+    driver: bridge
+
+services:
+  leilao-api:
+    build:
+      context: ./leilao-api
+      dockerfile: Dockerfile
+    volumes:
+      - ./leilao-api:/usr/src/app/
+    networks:
+      - course-network
+    command: ./vendor/bin/phpunit
