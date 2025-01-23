@@ -6,11 +6,13 @@ use Alura\Leilao\Model\Lance;
 use Alura\Leilao\Model\Leilao;
 use Alura\Leilao\Model\Usuario;
 use Alura\Leilao\Service\Avaliador;
+use DomainException;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class AvaliadorTest extends TestCase
 {
+    /**@var Avaliador */
     private $leiloeiro;
 
     protected function setUp(): void
@@ -114,5 +116,23 @@ class AvaliadorTest extends TestCase
             'ordem-decrescente' => [self::leilaoEmOrdemDecrescente()],
             'ordem-aleatoria' => [self::leilaoEmOrdemAleatoria()]
         ];
+    }
+
+    public function testLeilaoVazioNaoPodeSerAvaliado()
+    {
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessage('Nao eh possivel avaliar leilao vazio.');
+        $leilao = new Leilao('Fusca Azul');
+        $this->leiloeiro->avalia($leilao);
+    }
+
+    public function testLeilaoFinalizadoNaoPodeSerAvaliado()
+    {
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessage('Leilao jah finalizado');
+        $leilao = new Leilao('Fiat 147');
+        $leilao->recebeLance(new Lance(new Usuario('Teste'), 2000));
+        $leilao->finaliza();
+        $this->leiloeiro->avalia($leilao);
     }
 }
