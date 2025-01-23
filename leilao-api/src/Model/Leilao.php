@@ -2,6 +2,8 @@
 
 namespace Alura\Leilao\Model;
 
+use Exception;
+
 class Leilao
 {
     /** @var Lance[] */
@@ -10,8 +12,12 @@ class Leilao
     /** @var string */
     private $descricao;
 
+    /** @var bool */
+    private $finalizado = false;
+
     public function __construct(string $descricao)
     {
+        $this->finalizado = false;
         $this->descricao = $descricao;
         $this->lances = [];
     }
@@ -19,15 +25,25 @@ class Leilao
     public function recebeLance(Lance $lance)
     {
         if (!empty($this->lances) && $this->ehDoUltimoUsuario($lance)) {
-            return;
+            throw new \DomainException('Usuario nao pode propor 2 lances consecutivos');
         }
 
         $totalLancesUsuario = $this->quantidadeDeLancesPorUsuario($lance->getUsuario());
         if ($totalLancesUsuario >= 5) {
-            return;
+            throw new \DomainException('Usuario nao pode propor mais de 5 lances por leilao');
         }
 
         $this->lances[] = $lance;
+    }
+
+    public function finaliza()
+    {
+        $this->finalizado = true;
+    }
+
+    public function estaFinalizado(): bool
+    {
+        return $this->finalizado;
     }
 
     private function ehDoUltimoUsuario(Lance $lance)
