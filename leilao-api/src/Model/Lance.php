@@ -6,7 +6,6 @@ class Lance
 {
     /** @var Usuario */
     private $usuario;
-
     /** @var float */
     private $valor;
 

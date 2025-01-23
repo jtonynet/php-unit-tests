@@ -9,10 +9,10 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 COPY composer.json ./
 COPY composer.lock ./
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install
 
 COPY src ./
 COPY tests ./
+COPY banco.sqlite ./
 
-RUN composer require --dev phpunit/phpunit ^10
 CMD ["./vendor/bin/phpunit"]
