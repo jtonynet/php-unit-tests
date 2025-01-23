@@ -147,153 +147,37 @@ __TODO__
     </a>
 </div>
 
-<!-- 
+
+<!--  
 
 TODO: Finalidade didatica. Levar para Wiki/Confluence/Obsidian comum
 
 
-COMANDOS:
-
-```
-> composer create-project laravel/laravel application_download
-# Movi o conteudo para a raiz do projeto
-
-> php artisan serve
-> php artisan make:controller SeriesController --resource
-```
-
-```
-npm install
-npm install laravel-mix --save-dev
-npm run mix
-npm install bootstrap
-npm run mix
-#rodando o mix, ver tag 0.0.2
-```
-
-Criando migrations:
-```
-php artisan make:migration create_series_table
-php artisan migrate
-```
-
-Criando Model
-```
-php artisan make:model Serie
-```
-
-Criando Request
-```
-php artisan make:request SeriesFormRequest
-```
-
-Criando Models com migration
-```
-php artisan make:model Season -m
-php artisan make:model Episode -m
-```
-
-Executando migrations apos edicao dos arquivos de migrate:
-```
-php artisan migrate
-```
-
-debug bar:
-```
-composer require barryvdh/laravel-debugbar --dev
-```
-como visto em: https://github.com/barryvdh/laravel-debugbar
-
-```
-php artisan make:controller SeasonsController
-```
-
-
-Criando um serviceProvider de SeriesRepository para informar qual valor default o service container deve assumir quando essa interface for injetada e nao uma classe concreta Inversao de Dependencia
-```
-php artisan make::provider SeriesRepositoryProvider
-```
-verificar bootstrap\providers.php
-
-Criando nova migration
- ```
- php artisan make:migration --table=episodes
-
- ┌ What should the migration be named? ─────────────────────────┐
- │ episodes_add_watched_episodes                                │
- └──────────────────────────────────────────────────────────────┘
-
- ```
-
-
- Criando middleware de autenticacao customizado (provavelmente pratica ruim, seguindo ela por finalidade didatica)
- ```
- php artisan make:middleware Autenticador
- ```
-
-Enviando emails com Laravel. Pare o server e rode:
-```
-php artisan make:mail SeriesCreated
-```
-
-Abrir terminal iterativa dentro da aplicacao
-```
-php artisan tinker
-DB::select('select * from jobs;');
-```
-
-Saindo do terminal do tinker, subo  o processo do worker para fazer os disparos de email do queue:
-```
-php artisan queue:work
-```
-
-Iniciando worker com duas retentativas com 10 sec de delay entre cada uma delas
-```
-php artisan queue:work --tries=2 --delay=10
-```
-
-Criando listner para fazer o papel adequado dos workers (listner `faz algo quando o evento acontece`)
-```
-php artisan make:listener EmailUsersAboutSeriesCreated
-```
-
-Cria na estrutura do laravel o evento
-```
-php artisan make:event SeriesCreated
-```
-
-Cria Listener vinculado ao evento
-```
-php artisan make:listener LogSeriesCreated -e SeriesCreated
-```
-
-Cria coluna de referencia de imagem cover da serie
-```
-php artisan make:migration --table=series add_cover_column
-```
-
-Cria link simbolico no storage com estrategia local
-```
-php artisan storage:link
-```
-
-Comando para rodar os testes no laravel
-```
-php artisan test
-```
-
-[Importante parte da DOC sobre queue](https://laravel.com/docs/9.x/queues#queue-workers-and-deployment)
-
- - [Adicionar validacao assim q possivel](https://laravel.com/docs/9.x/validation#rule-confirmed)
- - 
- - [Laravel Breeze Lesson](https://cursos.alura.com.br/course/laravel-transacoes-service-container-autenticacao/task/105915)
--->
-
-
-<!--  
-
-PHPUnti no PHP 8.1 ou superior:
-```
+PHPUnit no PHP 8.1 ou superior:
+```bash
 composer require --dev phpunit/phpunit ^10
 ```
+
+Instalando phpcs globalmente
+```bash
+composer global require "squizlabs/php_codesniffer=*"
+```
+
+Pressione `Ctrl + ,` pesquise por `php`, clique nele e depois no link 
+`editar em settings.json` e adicione a seguinte linha ao final do settings.json
+```json
+ "phpcs.executablePath": "/home/jtony/.config/composer/vendor/bin/phpcs"
+```
+
+Crie um arquivo (ou use um do projeto) com as definicoes do phpcs chamado
+`phpcs.xml` e entao execute o seguinte comando:
+```bash
+phpcs --standard=phpcs.xml .
+```
+
+
+RODANDO TESTES:
+```bash
+./vendor/bin/phpunit --colors tests
+ ```
 -->

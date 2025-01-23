@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="CustomRules">
+    <description>Custom PHP CodeSniffer rules</description>
+    <rule ref="PSR12" />
+    
+    <!-- Most Permissive Patterns -->
+    <rule ref="Generic.Files.LineEndings">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+    <rule ref="PEAR.Commenting.FileComment">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Commenting.ClassComment">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Commenting.BlockComment">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+    <rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Commenting.FunctionComment">
+        <exclude-pattern>*</exclude-pattern>
+    </rule>
+</ruleset>
