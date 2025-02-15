@@ -70,8 +70,8 @@ Projeto do Curso:
 
 <br/>
 
-**Outros cursos vinculados:**
-- [PHP Laravel CRUD Series](https://github.com/jtonynet/php-laravel-series)
+Outros Repositórios/Cursos vinculados:
+- [`PHP Laravel CRUD Series`](https://github.com/jtonynet/php-laravel-series)
 
 <br/>
 
