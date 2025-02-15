@@ -68,6 +68,9 @@ Projeto do Curso:
   <img src="./docs/assets/images/layout/roadmap_in_here.jpeg" alt=""/>
 </div>
 
+Outros cursos vinculados:
+- [**PHP Laravel CRUD Series**](https://github.com/jtonynet/php-laravel-series)
+
 <br/>
 
 [⤴️ de volta ao Index](#index)
